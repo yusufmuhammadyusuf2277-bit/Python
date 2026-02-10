@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 34 - File Change Monitoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 34: Monitoring File Changes</h1></header>
+
+<main class="container">
+<p>
+This script detects changes in a file by comparing hashes.
+</p>
+
+<code>
+import hashlib<br><br>
+def get_hash(file):<br>
+&nbsp;&nbsp;with open(file, "rb") as f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return hashlib.md5(f.read()).hexdigest()<br><br>
+hash1 = get_hash("data.txt")<br>
+print("File hash:", hash1)
+</code>
+
+<p>
+Useful for detecting unauthorized file modifications.
+</p>
+
+<a href="lesson35.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

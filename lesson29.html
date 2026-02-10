@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 29 - Login Attempt Monitor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 29: Login Attempt Monitor</h1></header>
+
+<main class="container">
+<code>
+attempts = 0<br>
+while attempts < 3:<br>
+&nbsp;&nbsp;password = input("Enter password: ")<br>
+&nbsp;&nbsp;if password == "admin123":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Access granted")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;attempts += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Incorrect password")<br><br>
+if attempts == 3:<br>
+&nbsp;&nbsp;print("Account locked")
+</code>
+
+<p>
+Demonstrates brute-force protection logic.
+</p>
+
+<a href="lesson30.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

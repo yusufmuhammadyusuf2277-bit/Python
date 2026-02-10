@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 54 - Log Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 54: Log Analyzer + Alert System</h1></header>
+
+<main class="container">
+<p>
+Reads a log file and triggers alerts when failed login attempts exceed a limit.
+</p>
+
+<code>
+logs = ["success","failed","failed","failed"]<br>
+failed_count = 0<br>
+for l in logs:<br>
+&nbsp;&nbsp;if l == "failed":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;failed_count += 1<br>
+&nbsp;&nbsp;if failed_count > 2:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("⚠️ Alert: Multiple failed logins detected")
+</code>
+
+<a href="lesson55.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

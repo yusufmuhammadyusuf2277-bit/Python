@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 51 - Password Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 51: Password Manager & Strength Checker</h1></header>
+
+<main class="container">
+<p>
+This project stores passwords securely in a file and checks strength.
+</p>
+
+<code>
+import json<br>
+import os<br><br>
+def check_strength(pw):<br>
+&nbsp;&nbsp;return len(pw) >= 8 and any(c.isdigit() for c in pw)<br><br>
+passwords = {}<br>
+if os.path.exists("passwords.json"):<br>
+&nbsp;&nbsp;with open("passwords.json") as f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;passwords = json.load(f)<br><br>
+site = input("Enter site name: ")<br>
+pw = input("Enter password: ")<br>
+if check_strength(pw):<br>
+&nbsp;&nbsp;passwords[site] = pw<br>
+&nbsp;&nbsp;with open("passwords.json", "w") as f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;json.dump(passwords, f)<br>
+&nbsp;&nbsp;print("Password saved!")<br>
+else:<br>
+&nbsp;&nbsp;print("Weak password. Try again.")
+</code>
+
+<a href="lesson52.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

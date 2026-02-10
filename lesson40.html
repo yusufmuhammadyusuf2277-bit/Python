@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 40 - Monitoring Network Traffic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 40: Monitoring Network Traffic</h1></header>
+
+<main class="container">
+<p>
+Python can monitor simple network activity like packet counts.
+</p>
+
+<code>
+import psutil<br><br>
+net_io = psutil.net_io_counters()<br>
+print("Bytes Sent:", net_io.bytes_sent)<br>
+print("Bytes Received:", net_io.bytes_recv)
+</code>
+
+<p>
+This introduces network monitoring and helps understand traffic flow.
+</p>
+
+<p><strong>🎉 Python Networking Basics Completed</strong></p>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 59 - Network Device Check</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 59: Automated Network Device Check</h1></header>
+
+<main class="container">
+<p>
+Check multiple devices on your network automatically.
+</p>
+
+<code>
+import os<br>
+devices = ["192.168.1.1","192.168.1.2"]<br><br>
+for d in devices:<br>
+&nbsp;&nbsp;res = os.system(f"ping -c 1 {d}")<br>
+&nbsp;&nbsp;print(f"{d} is {'Online' if res==0 else 'Offline'}")
+</code>
+
+<p>Automation saves time monitoring multiple devices.</p>
+
+<a href="lesson60.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

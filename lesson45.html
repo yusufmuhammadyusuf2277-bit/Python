@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 45 - Vulnerability Report Template</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 45: Vulnerability Report Template</h1></header>
+
+<main class="container">
+<p>
+After scanning your own systems, it’s important to document findings.
+</p>
+
+<code>
+vulnerabilities = [<br>
+&nbsp;&nbsp;{"name": "Open Port 21", "risk": "Medium"},<br>
+&nbsp;&nbsp;{"name": "Weak Password", "risk": "High"}<br>
+]<br><br>
+for vuln in vulnerabilities:<br>
+&nbsp;&nbsp;print(f"Vulnerability: {vuln['name']}, Risk: {vuln['risk']}")
+</code>
+
+<p>
+This teaches the habit of reporting and fixing vulnerabilities responsibly.
+</p>
+
+<p><strong>🎉 You’ve completed Vulnerability Scanning Basics</strong></p>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

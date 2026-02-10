@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 58 - Automated Password Audit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 58: Automated Password Audit</h1></header>
+
+<main class="container">
+<p>
+Check a list of passwords against common weak passwords automatically.
+</p>
+
+<code>
+common_pw = ["123456","password","admin"]<br>
+users = {"alice":"123456","bob":"securepw"}<br><br>
+for user, pw in users.items():<br>
+&nbsp;&nbsp;if pw in common_pw:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"⚠️ {user} has a weak password")<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"{user} password is strong")
+</code>
+
+<p>Helps secure user accounts proactively.</p>
+
+<a href="lesson59.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

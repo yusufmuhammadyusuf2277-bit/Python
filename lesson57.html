@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 57 - Automated Log Monitoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 57: Automated Log Monitoring</h1></header>
+
+<main class="container">
+<p>
+Automatically check logs for suspicious activity.
+</p>
+
+<code>
+log_file = "system.log"<br>
+with open(log_file) as f:<br>
+&nbsp;&nbsp;for line in f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if "failed" in line:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"⚠️ Suspicious activity: {line.strip()}")
+</code>
+
+<p>Automated monitoring helps detect issues quickly.</p>
+
+<a href="lesson58.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

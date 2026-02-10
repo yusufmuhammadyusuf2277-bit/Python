@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 62 - Network Port Status Logger</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 62: Network Port Status Logger</h1></header>
+
+<main class="container">
+<p>
+Automatically logs which ports on your system are open or closed.
+</p>
+
+<code>
+import socket<br>
+import datetime<br><br>
+ports = [21,22,80,443]<br>
+for port in ports:<br>
+&nbsp;&nbsp;s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>
+&nbsp;&nbsp;result = s.connect_ex(("127.0.0.1", port))<br>
+&nbsp;&nbsp;status = "Open" if result==0 else "Closed"<br>
+&nbsp;&nbsp;print(f"{datetime.datetime.now()} - Port {port}: {status}")<br>
+&nbsp;&nbsp;s.close()
+</code>
+
+<p>Logging ports helps detect unauthorized changes or vulnerabilities.</p>
+
+<a href="lesson63.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

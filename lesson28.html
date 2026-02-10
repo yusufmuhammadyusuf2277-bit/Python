@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 28 - File Integrity Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 28: File Integrity Checker</h1></header>
+
+<main class="container">
+<p>This script checks if a file has been modified.</p>
+
+<code>
+import hashlib<br><br>
+def file_hash(filename):<br>
+&nbsp;&nbsp;with open(filename, "rb") as f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data = f.read()<br>
+&nbsp;&nbsp;return hashlib.md5(data).hexdigest()<br><br>
+print(file_hash("data.txt"))
+</code>
+
+<p>
+Used in security monitoring systems.
+</p>
+
+<a href="lesson29.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

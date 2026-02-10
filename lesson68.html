@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 68 - Automated Log Backup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 68: Automated Log Backup</h1></header>
+
+<main class="container">
+<p>
+Automatically back up important system logs for security auditing.
+</p>
+
+<code>
+import shutil, os, datetime<br><br>
+log_files = ["/var/log/auth.log", "/var/log/syslog"]<br>
+backup_folder = "/home/user/log_backup"<br>
+os.makedirs(backup_folder, exist_ok=True)<br>
+for f in log_files:<br>
+&nbsp;&nbsp;if os.path.exists(f):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;shutil.copy(f, backup_folder)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Backed up {f}")<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"{f} does not exist")
+</code>
+
+<p>Backups protect logs for auditing and forensic analysis.</p>
+
+<a href="lesson69.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

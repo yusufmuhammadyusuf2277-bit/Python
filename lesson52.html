@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 52 - Network Health Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 52: Automated Network Health Checker</h1></header>
+
+<main class="container">
+<p>
+This script checks if devices on your network respond and logs results.
+</p>
+
+<code>
+import os<br>
+import datetime<br><br>
+devices = ["192.168.1.1", "192.168.1.2"]<br>
+for ip in devices:<br>
+&nbsp;&nbsp;response = os.system(f"ping -c 1 {ip}")<br>
+&nbsp;&nbsp;status = "Online" if response == 0 else "Offline"<br>
+&nbsp;&nbsp;print(f"{datetime.datetime.now()} - {ip} is {status}")
+</code>
+
+<a href="lesson53.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

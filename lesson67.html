@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 67 - Monitoring System Processes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 67: Monitoring System Processes</h1></header>
+
+<main class="container">
+<p>
+Use Python to monitor running processes on Linux and detect suspicious activity.
+</p>
+
+<code>
+import psutil<br><br>
+for proc in psutil.process_iter(['pid','name','username']):<br>
+&nbsp;&nbsp;print(f"PID: {proc.info['pid']}, Name: {proc.info['name']}, User: {proc.info['username']}")
+</code>
+
+<p>Monitoring processes helps detect malware or unexpected activity.</p>
+
+<a href="lesson68.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

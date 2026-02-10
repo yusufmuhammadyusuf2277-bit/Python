@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 56 - Automated System Backup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 56: Automated System Backup</h1></header>
+
+<main class="container">
+<p>
+Automatically backup important files and folders using Python.
+</p>
+
+<code>
+import shutil, os, datetime<br><br>
+source_folder = "data"<br>
+backup_folder = "backup"<br>
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")<br>
+backup_path = os.path.join(backup_folder, f"backup_{timestamp}")<br>
+shutil.copytree(source_folder, backup_path)<br>
+print(f"Backup completed: {backup_path}")
+</code>
+
+<p>Defensive security starts with secure backups.</p>
+
+<a href="lesson57.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

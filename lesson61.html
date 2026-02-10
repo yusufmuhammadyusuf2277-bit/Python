@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 61 - Real-Time Network Traffic Monitor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 61: Real-Time Network Traffic Monitor</h1></header>
+
+<main class="container">
+<p>
+Monitor the amount of data sent and received on your system in real-time.
+</p>
+
+<code>
+import psutil<br>
+import time<br><br>
+while True:<br>
+&nbsp;&nbsp;net = psutil.net_io_counters()<br>
+&nbsp;&nbsp;print(f"Bytes Sent: {net.bytes_sent}, Bytes Received: {net.bytes_recv}")<br>
+&nbsp;&nbsp;time.sleep(5)
+</code>
+
+<p>Helps understand network activity and detect unusual spikes.</p>
+
+<a href="lesson62.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

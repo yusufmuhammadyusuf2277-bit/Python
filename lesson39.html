@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 39 - Simple Network Scanner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 39: Simple Network Scanner</h1></header>
+
+<main class="container">
+<p>
+This script scans devices on your own local network.
+</p>
+
+<code>
+import socket<br>
+import ipaddress<br><br>
+network = ipaddress.ip_network("192.168.1.0/30")<br>
+for ip in network.hosts():<br>
+&nbsp;&nbsp;s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>
+&nbsp;&nbsp;s.settimeout(0.5)<br>
+&nbsp;&nbsp;result = s.connect_ex((str(ip), 80))<br>
+&nbsp;&nbsp;if result == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"{ip} has port 80 open")<br>
+&nbsp;&nbsp;s.close()
+</code>
+
+<p>
+Useful for learning network mapping safely.
+</p>
+
+<a href="lesson40.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

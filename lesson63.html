@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 63 - Bandwidth Usage Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 63: Bandwidth Usage Tracker</h1></header>
+
+<main class="container">
+<p>
+Track how much bandwidth your system uses over time.
+</p>
+
+<code>
+import psutil<br>
+import time<br><br>
+old_sent = psutil.net_io_counters().bytes_sent<br>
+old_recv = psutil.net_io_counters().bytes_recv<br><br>
+while True:<br>
+&nbsp;&nbsp;net = psutil.net_io_counters()<br>
+&nbsp;&nbsp;sent = net.bytes_sent - old_sent<br>
+&nbsp;&nbsp;recv = net.bytes_recv - old_recv<br>
+&nbsp;&nbsp;print(f"Sent: {sent} bytes, Received: {recv} bytes")<br>
+&nbsp;&nbsp;old_sent = net.bytes_sent<br>
+&nbsp;&nbsp;old_recv = net.bytes_recv<br>
+&nbsp;&nbsp;time.sleep(5)
+</code>
+
+<p>Monitor usage to detect abnormal spikes or potential attacks.</p>
+
+<a href="lesson64.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

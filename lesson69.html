@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 69 - Monitoring User Login Attempts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 69: Monitoring User Login Attempts</h1></header>
+
+<main class="container">
+<p>
+Track failed login attempts from system logs using Python.
+</p>
+
+<code>
+log_file = "/var/log/auth.log"<br>
+failed_count = 0<br><br>
+with open(log_file) as f:<br>
+&nbsp;&nbsp;for line in f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if "Failed password" in line:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failed_count += 1<br><br>
+print(f"⚠️ Total failed logins: {failed_count}")
+</code>
+
+<p>This helps detect potential brute-force attacks safely.</p>
+
+<a href="lesson70.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

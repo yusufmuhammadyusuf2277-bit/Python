@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 65 - Network Traffic Alert System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 65: Network Traffic Alert System</h1></header>
+
+<main class="container">
+<p>
+Generate alerts when unusual network traffic is detected.
+</p>
+
+<code>
+import psutil<br><br>
+threshold = 1000000  # bytes<br>
+net = psutil.net_io_counters()<br>
+if net.bytes_recv > threshold:<br>
+&nbsp;&nbsp;print("⚠️ Alert: High incoming traffic detected")<br>
+if net.bytes_sent > threshold:<br>
+&nbsp;&nbsp;print("⚠️ Alert: High outgoing traffic detected")
+</code>
+
+<p>Alerts help you act fast to potential issues or attacks.</p>
+
+<a href="lesson66.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

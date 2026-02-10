@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 38 - Checking Open Ports</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 38: Checking Open Ports</h1></header>
+
+<main class="container">
+<p>
+You can check which ports are open on your own computer or server.
+</p>
+
+<code>
+import socket<br><br>
+target = "127.0.0.1"<br>
+ports = [21, 22, 80, 443]<br><br>
+for port in ports:<br>
+&nbsp;&nbsp;s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>
+&nbsp;&nbsp;result = s.connect_ex((target, port))<br>
+&nbsp;&nbsp;if result == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Port {port} is open")<br>
+&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Port {port} is closed")<br>
+&nbsp;&nbsp;s.close()
+</code>
+
+<p>
+⚠️ Only scan your own devices or test servers.
+</p>
+
+<a href="lesson39.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

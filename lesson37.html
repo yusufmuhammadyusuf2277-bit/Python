@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 37 - Python Socket Module</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 37: Python Socket Module</h1></header>
+
+<main class="container">
+<p>
+The `socket` module lets Python communicate over networks.
+</p>
+
+<code>
+import socket<br><br>
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>
+s.connect(("example.com", 80))<br>
+print("Connected to example.com on port 80")<br>
+s.close()
+</code>
+
+<p>
+This is safe practice if you only connect to your own server or public test servers.
+</p>
+
+<a href="lesson38.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 27 - Password Strength Check</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 27: Password Strength Check</h1></header>
+
+<main class="container">
+<code>
+password = input("Enter password: ")<br><br>
+if len(password) >= 8 and any(char.isdigit() for char in password):<br>
+&nbsp;&nbsp;print("Password is strong")<br>
+else:<br>
+&nbsp;&nbsp;print("Password is weak")
+</code>
+
+<p>
+This helps users create safer passwords.
+</p>
+
+<a href="lesson28.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>

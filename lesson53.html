@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 53 - Vulnerability Scanner Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Lesson 53: Vulnerability Scanner Simulator</h1></header>
+
+<main class="container">
+<p>
+Simulates scanning your own devices for weak passwords, open ports, and outdated software.
+</p>
+
+<code>
+targets = ["localhost"]<br>
+for t in targets:<br>
+&nbsp;&nbsp;ports = [21, 22, 80]<br>
+&nbsp;&nbsp;for p in ports:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Scanning {t} port {p} ... safe simulation")<br>
+&nbsp;&nbsp;passwords = ["123456", "admin"]<br>
+&nbsp;&nbsp;for pw in passwords:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Checked password {pw} on {t} ... safe simulation")
+</code>
+
+<a href="lesson54.html">Next Lesson →</a>
+</main>
+
+<footer><p>© Yusufmtech.com</p></footer>
+</body>
+</html>
